@@ -14,8 +14,9 @@ buttons.forEach((button) =>{
   document.querySelector('.js-keyboard-main').innerHTML = buttonHTML
   resultId ++;
   keyboardIds.push(resultId);
+  
 });
- 
+console.log(keyboardIds)
 
 
 //генерация вводимого текста 
@@ -74,3 +75,15 @@ function eventExeption(input) {
   };
 }
 */
+
+
+/*keyboardIds.forEach((i) => {
+  let id = keyboardIds[i];
+  console.log(id)
+  //console.log(document.querySelector(`js-button-${id}`))
+})
+*/
+for (let i=0; i < keyboardIds.length; i++) {
+  const id = i+1;
+  console.log(document.querySelector(`.js-button-${id}`).innerText)
+}
