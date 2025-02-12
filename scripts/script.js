@@ -1,6 +1,6 @@
 import { buttons } from "./data.js";
 import { exeptions } from "./data.js";
-import { exeptions1 } from "./data.js";
+
 
 let buttonHTML = '';
 let keyboardIds = [];
@@ -25,25 +25,19 @@ let inputResult = [];
 document.body.addEventListener('keydown', (event) => {
   let input = '';
   input = event.key;
-  /*switch(input) {
-    case eventExeption(input):
-      break; 
-    case 'Backspace':
-      inputRemove();
-      break
-    default:
-      exeptions1[input] ?? inputFieldgen(input);
-      if (exeptions1[input] === undefined) {
-        inputFieldgen(input);
-      } 
-    };*/
+  keyPressed (input)
     if (input === 'Backspace') {
       inputRemove();
-    } else if (exeptions1[input] === undefined) {
+    } else if (exeptions[input] === undefined) {
       inputFieldgen(input);
     } 
   })
-
+  
+  document.body.addEventListener('keyup', (event) => {
+    let input = '';
+    input = event.key;
+    keyNotPressed (input)
+    })
 
     
   
@@ -65,7 +59,7 @@ function inputRemove () {
     }; 
 }
 
-//исключения 
+//исключения два иных варианта 
 /*
 function eventExeption(input) {
   for (let i=0; i < exeptions.length; i++) {
@@ -75,15 +69,35 @@ function eventExeption(input) {
   };
 }
 */
+/*switch(input) {
+    case eventExeption(input):
+      break; 
+    case 'Backspace':
+      inputRemove();
+      break
+    default:
+      exeptions1[input] ?? inputFieldgen(input);
+      if (exeptions1[input] === undefined) {
+        inputFieldgen(input);
+      } 
+    };*/
 
 
-/*keyboardIds.forEach((i) => {
-  let id = keyboardIds[i];
-  console.log(id)
-  //console.log(document.querySelector(`js-button-${id}`))
-})
-*/
-for (let i=0; i < keyboardIds.length; i++) {
-  const id = i+1;
-  console.log(document.querySelector(`.js-button-${id}`).innerText)
+function keyPressed (input) {
+    for (let i=0; i < keyboardIds.length; i++) {
+    const id = i+1;
+    if (document.querySelector(`.js-button-${id}`).innerText === input) {
+      console.log(document.querySelector(`.js-button-${id}`).innerHTML);
+      document.querySelector(`.js-button-${id}`).classList.add("is-pressed")
+    };
+  };
+}
+
+function keyNotPressed (input) {
+  for (let i=0; i < keyboardIds.length; i++) {
+    const id = i+1;
+    if (document.querySelector(`.js-button-${id}`).innerText === input) {
+      document.querySelector(`.js-button-${id}`).classList.remove("is-pressed")
+    };
+  };
 }

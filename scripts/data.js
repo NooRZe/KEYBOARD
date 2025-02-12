@@ -100,14 +100,48 @@ export const buttons = [{
 },{
   buttonSymbol: '/',
   buttonId: 34,
+},{
+  buttonSymbol: 'CapsLock',
+  buttonId: 35,
 }];
 
 
-export const exeptions = ['Shift', 'Tab', 'Escape', 'Control', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', 'CapsLock', 'Enter', 'ScrollLock', 'Pause', 'NumLock', 'Meta','Alt', 'AltGraph', 'ContextMenu','ArrowLeft', 'ArrowUp', 'ArrowRight', 'ArrowDown', 'Insert', 'Home', 'PageUp', 'Delete', 'End', 'PageDown'];
+/*export const exeptions = ['Shift', 'Tab', 'Escape', 'Control', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', 'CapsLock', 'Enter', 'ScrollLock', 'Pause', 'NumLock', 'Meta','Alt', 'AltGraph', 'ContextMenu','ArrowLeft', 'ArrowUp', 'ArrowRight', 'ArrowDown', 'Insert', 'Home', 'PageUp', 'Delete', 'End', 'PageDown'];*/
 
- export const exeptions1 = {
+ export const exeptions = {
   "Shift": "" , 
   "Tab": "" , 
   "Escape": "" ,
+  "Control": "", 
+  "F1": "", 
+  "F2": "", 
+  "F3": "", 
+  "F4": "", 
+  "F5": "", 
+  "F6": "", 
+  "F7": "", 
+  "F8": "", 
+  "F10": "", 
+  "F11": "", 
+  "F12": "", 
+  "CapsLock": "", 
+  "Enter": "", 
+  "ScrollLock": "", 
+  "Pause": "", 
+  "NumLock": "", 
+  "Meta": "",
+  "Alt": "", 
+  "AltGraph": "",
+  "ContextMenu": "",
+  "ArrowLeft": "", 
+  "ArrowUp": "", 
+  "ArrowRight": "", 
+  "ArrowDown": "", 
+  "Insert": "", 
+  "Home": "", 
+  "PageUp": "", 
+  "Delete": "", 
+  "End": "", 
+  "PageDown": "",
 } 
 
