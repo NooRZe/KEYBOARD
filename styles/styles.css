@@ -1,3 +1,19 @@
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+
 .is-pressed {
   background-color: green;
+}
+
+.button-stock {
+  padding: 2px;
+}
+
+.main-keyboard-grid {
+  display: flex;
+  
+  background-color: aquamarine;
 }

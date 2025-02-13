@@ -1,12 +1,12 @@
 import { buttons } from "./data.js";
 import { exeptions } from "./data.js";
+import { buttonsDouble } from "./data.js";
 
-
-let buttonHTML = '';
+//let buttonHTML = '';
 let keyboardIds = [];
 let resultId = 0;
-
-
+let buttonHTMLdouble = '';
+/*
 buttons.forEach((button) =>{
   buttonHTML = buttonHTML +  `
   <button class="js-button-${button.buttonId}" id="${button.buttonId}">${button.buttonSymbol}</button>
@@ -17,7 +17,24 @@ buttons.forEach((button) =>{
   
 });
 console.log(keyboardIds)
+*/
 
+//кнопки с двойным регистром 
+buttonsDouble.forEach((button) => {
+  buttonHTMLdouble = buttonHTMLdouble +  `
+  <div>
+    <button class="js-button-${button.buttonId} button-stock" id="${button.buttonId}">
+      <p class="js-button-en-${button.buttonId}">${button.buttonSymbolEn}</p>
+      <p class="js-button-ru-${button.buttonId}">${button.buttonSymbolRu}</p>
+    </button>
+  </div>
+  `;
+  document.querySelector('.js-keyboard-double-main').innerHTML = buttonHTMLdouble;
+  resultId ++;
+  keyboardIds.push(resultId);
+});
+
+console.log(keyboardIds)
 
 //генерация вводимого текста 
 
@@ -25,19 +42,18 @@ let inputResult = [];
 document.body.addEventListener('keydown', (event) => {
   let input = '';
   input = event.key;
-  keyPressed (input)
+  keyPressed (input);
     if (input === 'Backspace') {
       inputRemove();
     } else if (exeptions[input] === undefined) {
       inputFieldgen(input);
     } 
-  })
-  
+  });
   document.body.addEventListener('keyup', (event) => {
     let input = '';
     input = event.key;
-    keyNotPressed (input)
-    })
+    keyNotPressed (input);
+  });
 
     
   
@@ -58,6 +74,27 @@ function inputRemove () {
       document.querySelector('.js-input-field').innerHTML += inputResult[i]; 
     }; 
 }
+
+
+//для двойных клавиш
+function keyPressed (input) {
+  for (let i=0; i < keyboardIds.length; i++) {
+  const id = i+1;
+  if (document.querySelector(`.js-button-en-${id}`).innerText === input || document.querySelector(`.js-button-ru-${id}`).innerText === input) {
+    document.querySelector(`.js-button-${id}`).classList.add("is-pressed")
+  };
+};
+}
+
+function keyNotPressed (input) {
+  for (let i=0; i < keyboardIds.length; i++) {
+    const id = i+1;
+    if (document.querySelector(`.js-button-en-${id}`).innerText === input || document.querySelector(`.js-button-ru-${id}`).innerText === input) {
+      document.querySelector(`.js-button-${id}`).classList.remove("is-pressed")
+    };
+  };
+}
+
 
 //исключения два иных варианта 
 /*
@@ -82,7 +119,7 @@ function eventExeption(input) {
       } 
     };*/
 
-
+/* Для одинарной клавиши 
 function keyPressed (input) {
     for (let i=0; i < keyboardIds.length; i++) {
     const id = i+1;
@@ -101,3 +138,30 @@ function keyNotPressed (input) {
     };
   };
 }
+*/
+
+/*
+function keyPressed (input) {
+  for (let i=0; i < keyboardIds.length; i++) {
+  const id = i+1;
+    if (input === document.querySelector(`.js-button-en-${id}`).innerText) {
+      document.querySelector(`.js-button-${id}`).classList.add("is-pressed")
+    } else if (input === document.querySelector(`.js-button-ru-${id}`).innerText) {
+      document.querySelector(`.js-button-${id}`).classList.add("is-pressed")
+    }
+  };
+}  
+
+*/
+
+
+
+//Генерация текста для теста 
+
+const testText = ['t', 'e', 's', 't'];
+let text = '';
+testText.forEach((i) => {
+  text = text + i;
+})
+console.log(text);
+document.querySelector('.js-base-text').innerHTML = text;
