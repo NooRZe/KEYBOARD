@@ -1,6 +1,13 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
 p {
+  font-size: 14px;
   padding: 0px;
   margin: 0px;
+  font-weight: 600;
 }
 
 
@@ -9,11 +16,17 @@ p {
 }
 
 .button-stock {
+  margin: 0.5px;
   padding: 2px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
 }
 
 .main-keyboard-grid {
   display: flex;
-  
+  flex-wrap: wrap;
+  width: 500px;
+  justify-content: center;
   background-color: aquamarine;
 }

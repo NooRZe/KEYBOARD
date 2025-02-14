@@ -6,7 +6,8 @@ import { buttonsDouble } from "./data.js";
 let keyboardIds = [];
 let resultId = 0;
 let buttonHTMLdouble = '';
-/*
+
+/* одиночные кнопки
 buttons.forEach((button) =>{
   buttonHTML = buttonHTML +  `
   <button class="js-button-${button.buttonId}" id="${button.buttonId}">${button.buttonSymbol}</button>
@@ -62,8 +63,9 @@ function inputFieldgen (input) {
   inputResult.push(input);
       document.querySelector('.js-input-field').innerHTML = '';
     for (let i=0; i < inputResult.length; i++) {
-      document.querySelector('.js-input-field').innerHTML += inputResult[i]; 
+      document.querySelector('.js-input-field').innerHTML += inputResult[i];       
     };
+  console.log(inputResult)
 }
 
 //удаление
@@ -73,6 +75,7 @@ function inputRemove () {
     for (let i=0; i < inputResult.length; i++) {
       document.querySelector('.js-input-field').innerHTML += inputResult[i]; 
     }; 
+  console.log(inputResult)
 }
 
 
