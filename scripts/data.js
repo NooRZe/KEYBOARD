@@ -105,147 +105,277 @@ export const buttons = [{
   buttonId: 35,
 }];
 
+
+
+
+
 export const buttonsDouble = [{
-  buttonSymbolEn: 'q',
-  buttonSymbolRu: 'й',
+  buttonSymbolEn: 'Escape',
+  buttonSymbolRu: '',
   buttonId: 1,
 },{
-  buttonSymbolEn: 'w',
-  buttonSymbolRu: 'ц',
+  buttonSymbolEn: 'F1',
+  buttonSymbolRu: '',
   buttonId: 2,
 },{
-  buttonSymbolEn: 'e',
-  buttonSymbolRu: 'у',
+  buttonSymbolEn: 'F2',
+  buttonSymbolRu: '',
   buttonId: 3,
 },{
-  buttonSymbolEn: 'r',
-  buttonSymbolRu: 'к',
+  buttonSymbolEn: 'F3',
+  buttonSymbolRu: '',
   buttonId: 4,
 },{
-  buttonSymbolEn: 't',
-  buttonSymbolRu: 'е',
+  buttonSymbolEn: 'F4',
+  buttonSymbolRu: '',
   buttonId: 5,
 },{
-  buttonSymbolEn: 'y',
-  buttonSymbolRu: 'н',
+  buttonSymbolEn: 'F5',
+  buttonSymbolRu: '',
   buttonId: 6,
 },{
-  buttonSymbolEn: 'u',
-  buttonSymbolRu: 'г',
+  buttonSymbolEn: 'F6',
+  buttonSymbolRu: '',
   buttonId: 7,
 },{
-  buttonSymbolEn: 'i',
-  buttonSymbolRu: 'ш',
+  buttonSymbolEn: 'F7',
+  buttonSymbolRu: '',
   buttonId: 8,
 },{
-  buttonSymbolEn: 'o',
-  buttonSymbolRu: 'щ',
+  buttonSymbolEn: 'F8',
+  buttonSymbolRu: '',
   buttonId: 9,
 },{
-  buttonSymbolEn: 'p',
-  buttonSymbolRu: 'з',
+  buttonSymbolEn: 'F9',
+  buttonSymbolRu: '',
   buttonId: 10,
 },{
-  buttonSymbolEn: '[',
-  buttonSymbolRu: 'х',
+  buttonSymbolEn: 'F10',
+  buttonSymbolRu: '',
   buttonId: 11,
 },{
-  buttonSymbolEn: ']',
-  buttonSymbolRu: 'ъ',
+  buttonSymbolEn: 'F11',
+  buttonSymbolRu: '',
   buttonId: 12,
 },{
-  buttonSymbolEn: 'a',
-  buttonSymbolRu: 'ф',
+  buttonSymbolEn: 'F12',
+  buttonSymbolRu: '',
   buttonId: 13,
 },{
-  buttonSymbolEn: 's',
-  buttonSymbolRu: 'ы',
+  buttonSymbolEn: '`',
+  buttonSymbolRu: 'ё',
   buttonId: 14,
 },{
-  buttonSymbolEn: 'd',
-  buttonSymbolRu: 'в',
+  buttonSymbolEn: '!',
+  buttonSymbolRu: '1',
   buttonId: 15,
 },{
-  buttonSymbolEn: 'f',
-  buttonSymbolRu: 'а',
+  buttonSymbolEn: '@',
+  buttonSymbolRu: '2',
   buttonId: 16,
 },{
-  buttonSymbolEn: 'g',
-  buttonSymbolRu: 'п',
+  buttonSymbolEn: '#',
+  buttonSymbolRu: '3',
   buttonId: 17,
 },{
-  buttonSymbolEn: 'h',
-  buttonSymbolRu: 'р',
+  buttonSymbolEn: '$',
+  buttonSymbolRu: '4',
   buttonId: 18,
 },{
-  buttonSymbolEn: 'j',
-  buttonSymbolRu: 'о',
+  buttonSymbolEn: '%',
+  buttonSymbolRu: '5',
   buttonId: 19,
 },{
-  buttonSymbolEn: 'k',
-  buttonSymbolRu: 'л',
+  buttonSymbolEn: '^',
+  buttonSymbolRu: '6',
   buttonId: 20,
 },{
-  buttonSymbolEn: 'l',
-  buttonSymbolRu: 'д',
+  buttonSymbolEn: '&',
+  buttonSymbolRu: '7',
   buttonId: 21,
 },{
-  buttonSymbolEn: ';',
-  buttonSymbolRu: 'ж',
+  buttonSymbolEn: '*',
+  buttonSymbolRu: '8',
   buttonId: 22,
 },{
-  buttonSymbolEn: '"',
-  buttonSymbolRu: 'э',
+  buttonSymbolEn: '(',
+  buttonSymbolRu: '9',
   buttonId: 23,
 },{
-  buttonSymbolEn: '|',
-  buttonSymbolRu: `/`,
+  buttonSymbolEn: ')',
+  buttonSymbolRu: '0',
   buttonId: 24,
 },{
-  buttonSymbolEn: 'z',
-  buttonSymbolRu: 'я',
+  buttonSymbolEn: '_',
+  buttonSymbolRu: `-`,
   buttonId: 25,
+},{
+  buttonSymbolEn: '+',
+  buttonSymbolRu: '=',
+  buttonId: 26,
 },{
   buttonSymbolEn: 'x',
   buttonSymbolRu: 'ч',
-  buttonId: 26,
-},{
-  buttonSymbolEn: 'c',
-  buttonSymbolRu: 'с',
   buttonId: 27,
 },{
-  buttonSymbolEn: 'v',
-  buttonSymbolRu: 'м',
+  buttonSymbolEn: 'Backspace',
+  buttonSymbolRu: '',
   buttonId: 28,
 },{
-  buttonSymbolEn: 'b',
-  buttonSymbolRu: 'и',
+  buttonSymbolEn: 'Tab',
+  buttonSymbolRu: '',
   buttonId: 29,
 },{
-  buttonSymbolEn: 'n',
-  buttonSymbolRu: 'т',
+  buttonSymbolEn: 'q',
+  buttonSymbolRu: 'й',
   buttonId: 30,
 },{
-  buttonSymbolEn: 'm',
-  buttonSymbolRu: 'ь',
+  buttonSymbolEn: 'w',
+  buttonSymbolRu: 'ц',
   buttonId: 31,
 },{
-  buttonSymbolEn: ',',
-  buttonSymbolRu: 'б',
+  buttonSymbolEn: 'e',
+  buttonSymbolRu: 'у',
   buttonId: 32,
 },{
-  buttonSymbolEn: '.',
-  buttonSymbolRu: 'ю',
+  buttonSymbolEn: 'r',
+  buttonSymbolRu: 'к',
   buttonId: 33,
 },{
-  buttonSymbolEn: '/',
-  buttonSymbolRu: '.',
+  buttonSymbolEn: 't',
+  buttonSymbolRu: 'е',
   buttonId: 34,
+},{
+  buttonSymbolEn: 'y',
+  buttonSymbolRu: 'н',
+  buttonId: 35,
+},{
+  buttonSymbolEn: 'u',
+  buttonSymbolRu: 'г',
+  buttonId: 36,
+},{
+  buttonSymbolEn: 'i',
+  buttonSymbolRu: 'ш',
+  buttonId: 37,
+},{
+  buttonSymbolEn: 'o',
+  buttonSymbolRu: 'щ',
+  buttonId: 38,
+},{
+  buttonSymbolEn: 'p',
+  buttonSymbolRu: 'з',
+  buttonId: 39,
+},{
+  buttonSymbolEn: `[`,
+  buttonSymbolRu: 'х',
+  buttonId: 40,
+},{
+  buttonSymbolEn: ']',
+  buttonSymbolRu: 'ъ',
+  buttonId: 41,
+},{
+  buttonSymbolEn: '/',
+  buttonSymbolRu: '|',
+  buttonId: 42,
 },{
   buttonSymbolEn: 'CapsLock',
   buttonSymbolRu: '',
-  buttonId: 35,
+  buttonId: 43,
+},{
+  buttonSymbolEn: 'a',
+  buttonSymbolRu: 'ф',
+  buttonId: 44,
+},{
+  buttonSymbolEn: 's',
+  buttonSymbolRu: 'ы',
+  buttonId: 45,
+},{
+  buttonSymbolEn: 'd',
+  buttonSymbolRu: 'в',
+  buttonId: 46,
+},{
+  buttonSymbolEn: 'f',
+  buttonSymbolRu: 'а',
+  buttonId: 47,
+},{
+  buttonSymbolEn: 'g',
+  buttonSymbolRu: 'п',
+  buttonId: 48,
+},{
+  buttonSymbolEn: 'h',
+  buttonSymbolRu: 'р',
+  buttonId: 49,
+},{
+  buttonSymbolEn: 'j',
+  buttonSymbolRu: 'о',
+  buttonId: 50,
+},{
+  buttonSymbolEn: 'k',
+  buttonSymbolRu: 'л',
+  buttonId: 51,
+},{
+  buttonSymbolEn: 'l',
+  buttonSymbolRu: 'д',
+  buttonId: 52,
+},{
+  buttonSymbolEn: ';',
+  buttonSymbolRu: 'ж',
+  buttonId: 53,
+},{
+  buttonSymbolEn: `'`,
+  buttonSymbolRu: 'э',
+  buttonId: 54,
+},{
+  buttonSymbolEn: 'Enter',
+  buttonSymbolRu: '',
+  buttonId: 55,
+},{
+  buttonSymbolEn: 'Shift',
+  buttonSymbolRu: ' ',
+  buttonId: 56,
+},{
+  buttonSymbolEn: 'z',
+  buttonSymbolRu: 'я',
+  buttonId: 57,
+},{
+  buttonSymbolEn: 'x',
+  buttonSymbolRu: 'ч',
+  buttonId: 58,
+},{
+  buttonSymbolEn: 'c',
+  buttonSymbolRu: 'с',
+  buttonId: 59,
+},{
+  buttonSymbolEn: 'v',
+  buttonSymbolRu: `м`,
+  buttonId: 60,
+},{
+  buttonSymbolEn: 'b',
+  buttonSymbolRu: 'и',
+  buttonId: 61,
+},{
+  buttonSymbolEn: 'n',
+  buttonSymbolRu: 'т',
+  buttonId: 62,
+},{
+  buttonSymbolEn: 'm',
+  buttonSymbolRu: 'ь',
+  buttonId: 63,
+},{
+  buttonSymbolEn: ',',
+  buttonSymbolRu: 'б',
+  buttonId: 64,
+},{
+  buttonSymbolEn: '.',
+  buttonSymbolRu: 'ю',
+  buttonId: 65,
+},{
+  buttonSymbolEn: '/',
+  buttonSymbolRu: '.',
+  buttonId: 66,
 }];
+
+
 
  export const exeptions = {
   "Shift": "" , 

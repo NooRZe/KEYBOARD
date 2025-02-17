@@ -6,7 +6,7 @@ import { buttonsDouble } from "./data.js";
 let keyboardIds = [];
 let resultId = 0;
 let buttonHTMLdouble = '';
-
+const testText = ['t', 'e', 's', 't'];
 /* одиночные кнопки
 buttons.forEach((button) =>{
   buttonHTML = buttonHTML +  `
@@ -24,7 +24,7 @@ console.log(keyboardIds)
 buttonsDouble.forEach((button) => {
   buttonHTMLdouble = buttonHTMLdouble +  `
   <div>
-    <button class="js-button-${button.buttonId} button-stock" id="${button.buttonId}">
+    <button class="js-button-${button.buttonId} button-stock button-${button.buttonId}" id="${button.buttonId}">
       <p class="js-button-en-${button.buttonId}">${button.buttonSymbolEn}</p>
       <p class="js-button-ru-${button.buttonId}">${button.buttonSymbolRu}</p>
     </button>
@@ -34,7 +34,7 @@ buttonsDouble.forEach((button) => {
   resultId ++;
   keyboardIds.push(resultId);
 });
-
+console.log(buttonsDouble)
 console.log(keyboardIds)
 
 //генерация вводимого текста 
@@ -48,7 +48,9 @@ document.body.addEventListener('keydown', (event) => {
       inputRemove();
     } else if (exeptions[input] === undefined) {
       inputFieldgen(input);
-    } 
+    } else if (input === 'Enter') {
+      compareArrays (testText, inputResult)
+    }
   });
   document.body.addEventListener('keyup', (event) => {
     let input = '';
@@ -63,7 +65,7 @@ function inputFieldgen (input) {
   inputResult.push(input);
       document.querySelector('.js-input-field').innerHTML = '';
     for (let i=0; i < inputResult.length; i++) {
-      document.querySelector('.js-input-field').innerHTML += inputResult[i];       
+      document.querySelector('.js-input-field').innerHTML += inputResult[i];   
     };
   console.log(inputResult)
 }
@@ -161,10 +163,27 @@ function keyPressed (input) {
 
 //Генерация текста для теста 
 
-const testText = ['t', 'e', 's', 't'];
+
 let text = '';
 testText.forEach((i) => {
   text = text + i;
 })
 console.log(text);
 document.querySelector('.js-base-text').innerHTML = text;
+//сравнение результата 
+function compareArrays (a,b) {
+  if(a.length !== b.length) {
+    console.log('разные текста');
+    return false;
+  } else {
+    for (let i = 0; i < a.length; i++) {
+      if (a[i] !== b[i]) {
+        console.log('нет');
+        return false;
+      };
+    };
+    console.log('база');
+    document.querySelector('.js-input-field').classList.add("resultFin");
+  };
+}
+
