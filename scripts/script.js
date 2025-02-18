@@ -1,12 +1,20 @@
 import { buttons } from "./data.js";
 import { exeptions } from "./data.js";
 import { buttonsDouble } from "./data.js";
-
+import { buttonsRow1 } from "./data.js";
+import { buttonsRow2 } from "./data.js";
+import { buttonsRow3 } from "./data.js";
+import { buttonsRow4 } from "./data.js";
+import { buttonsRow5 } from "./data.js";
 //let buttonHTML = '';
 let keyboardIds = [];
 let resultId = 0;
-let buttonHTMLdouble = '';
-const testText = ['t', 'e', 's', 't'];
+let buttonHTMLrow1 = '';
+let buttonHTMLrow2 = '';
+let buttonHTMLrow3 = '';
+let buttonHTMLrow4 = '';
+let buttonHTMLrow5 = '';
+const testText = ['T', 'e', 's', 't', ' ', 'н', 'а', ' ', 'в', 'с', 'ё', '!'];
 /* одиночные кнопки
 buttons.forEach((button) =>{
   buttonHTML = buttonHTML +  `
@@ -20,25 +28,97 @@ buttons.forEach((button) =>{
 console.log(keyboardIds)
 */
 
-//кнопки с двойным регистром 
+
+//генерация по строкам в дивы
+buttonsRow1.forEach((button) => {
+  buttonHTMLrow1 = buttonHTMLrow1 +  `
+    <div class="single-button">
+      <button class="js-button-${button.buttonId} button-stock button-${button.buttonId}" id="${button.buttonId}">
+        <p class="js-button-en-${button.buttonId}">${button.buttonSymbolEn}</p>
+        <p class="js-button-ru-${button.buttonId}">${button.buttonSymbolRu}</p>
+      </button>
+    </div>
+    `;
+  document.querySelector('.js-clac-row1').innerHTML = buttonHTMLrow1;
+  resultId ++;
+  keyboardIds.push(resultId);
+});
+
+buttonsRow2.forEach((button) => {
+  buttonHTMLrow2 = buttonHTMLrow2 +  `
+    <div class="single-button">
+      <button class="js-button-${button.buttonId} button-stock button-${button.buttonId}" id="${button.buttonId}">
+        <p class="js-button-en-${button.buttonId}">${button.buttonSymbolEn}</p>
+        <p class="js-button-ru-${button.buttonId}">${button.buttonSymbolRu}</p>
+      </button>
+    </div>
+    `;
+  document.querySelector('.js-clac-row2').innerHTML = buttonHTMLrow2;
+  resultId ++;
+  keyboardIds.push(resultId);
+});
+
+buttonsRow3.forEach((button) => {
+  buttonHTMLrow3 = buttonHTMLrow3 +  `
+    <div class="single-button">
+      <button class="js-button-${button.buttonId} button-stock button-${button.buttonId}" id="${button.buttonId}">
+        <p class="js-button-en-${button.buttonId}">${button.buttonSymbolEn}</p>
+        <p class="js-button-ru-${button.buttonId}">${button.buttonSymbolRu}</p>
+      </button>
+    </div>
+    `;
+  document.querySelector('.js-clac-row3').innerHTML = buttonHTMLrow3;
+  resultId ++;
+  keyboardIds.push(resultId);
+});
+
+buttonsRow4.forEach((button) => {
+  buttonHTMLrow4 = buttonHTMLrow4 +  `
+    <div class="single-button">
+      <button class="js-button-${button.buttonId} button-stock button-${button.buttonId}" id="${button.buttonId}">
+        <p class="js-button-en-${button.buttonId}">${button.buttonSymbolEn}</p>
+        <p class="js-button-ru-${button.buttonId}">${button.buttonSymbolRu}</p>
+      </button>
+    </div>
+    `;
+  document.querySelector('.js-clac-row4').innerHTML = buttonHTMLrow4;
+  resultId ++;
+  keyboardIds.push(resultId);
+});
+
+buttonsRow5.forEach((button) => {
+  buttonHTMLrow5 = buttonHTMLrow5 +  `
+    <div class="single-button">
+      <button class="js-button-${button.buttonId} button-stock button-${button.buttonId}" id="${button.buttonId}">
+        <p class="js-button-en-${button.buttonId}">${button.buttonSymbolEn}</p>
+        <p class="js-button-ru-${button.buttonId}">${button.buttonSymbolRu}</p>
+      </button>
+    </div>
+    `;
+  document.querySelector('.js-clac-row5').innerHTML = buttonHTMLrow5;
+  resultId ++;
+  keyboardIds.push(resultId);
+});
+
+/*//кнопки с двойным регистром 
 buttonsDouble.forEach((button) => {
   buttonHTMLdouble = buttonHTMLdouble +  `
-  <div>
-    <button class="js-button-${button.buttonId} button-stock button-${button.buttonId}" id="${button.buttonId}">
-      <p class="js-button-en-${button.buttonId}">${button.buttonSymbolEn}</p>
-      <p class="js-button-ru-${button.buttonId}">${button.buttonSymbolRu}</p>
-    </button>
-  </div>
-  `;
+    <div class="single-button">
+      <button class="js-button-${button.buttonId} button-stock button-${button.buttonId}" id="${button.buttonId}">
+        <p class="js-button-en-${button.buttonId}">${button.buttonSymbolEn}</p>
+        <p class="js-button-ru-${button.buttonId}">${button.buttonSymbolRu}</p>
+      </button>
+    </div>
+    `;
   document.querySelector('.js-keyboard-double-main').innerHTML = buttonHTMLdouble;
   resultId ++;
   keyboardIds.push(resultId);
 });
+*/
 console.log(buttonsDouble)
 console.log(keyboardIds)
 
-//генерация вводимого текста 
-
+//генерация вводимого текста
 let inputResult = [];
 document.body.addEventListener('keydown', (event) => {
   let input = '';
@@ -58,7 +138,6 @@ document.body.addEventListener('keydown', (event) => {
     keyNotPressed (input);
   });
 
-    
   
 //генерация текста 
 function inputFieldgen (input) {
